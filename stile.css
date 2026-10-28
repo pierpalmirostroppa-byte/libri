@@ -1,0 +1,263 @@
+/* Intrecci di Carta · sito dei libri */
+
+@font-face { font-family: 'EB Garamond'; src: url(font/EBGaramond-latin.woff2) format('woff2'); font-weight: 400 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'EB Garamond'; src: url(font/EBGaramond-Italic-latin.woff2) format('woff2'); font-weight: 400 800; font-style: italic; font-display: swap; }
+
+:root {
+  --carta: #f4ede0;
+  --carta-2: #ebe2cf;
+  --carta-3: #e1d5bd;
+  --inchiostro: #1e1a16;
+  --inchiostro-2: #3a332c;
+  --grigio: #5c5247;
+  --filo: rgba(30, 26, 22, .14);
+  --oro: #9c7a3f;
+  --oro-chiaro: #c9a86a;
+  --acc: var(--oro);
+  --gutter: clamp(16px, 4vw, 44px);
+  --max: 1120px;
+  --cjk: 'Songti SC', 'STSong', 'SimSun', 'Noto Serif SC', 'Source Han Serif SC';
+  --titoli: 'EB Garamond', Garamond, 'Palatino Linotype', Palatino, Georgia, var(--cjk), serif;
+  --testo: 'EB Garamond', Garamond, 'Palatino Linotype', Palatino, Georgia, 'Noto Serif', var(--cjk), serif;
+  /* colore d'accento scurito, perché le scritte si leggano sul fondo carta */
+  --acc-scuro: color-mix(in srgb, var(--acc) 55%, #1e1a16);
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; color: var(--inchiostro); font: 400 1.25rem/1.6 var(--testo);
+  background:
+    radial-gradient(120% 60% at 50% 0%, rgba(255, 252, 244, .9), transparent 60%),
+    var(--carta);
+  overflow-x: hidden;
+}
+/* grana della carta */
+body::before {
+  content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 100; opacity: .07; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--titoli); font-weight: 500; line-height: 1.1; margin: 0; }
+h3 { font-weight: 600; }
+h2 { font-size: clamp(2.1rem, 5vw, 3.6rem); letter-spacing: -.01em; }
+h3 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
+p { margin: 0; }
+:focus-visible { outline: 2px solid var(--oro); outline-offset: 3px; }
+
+.salta { position: absolute; left: -999px; top: 8px; background: var(--inchiostro); color: var(--carta); padding: 8px 14px; z-index: 200; }
+.salta:focus { left: 8px; }
+
+.occhiello {
+  font: 700 .84rem/1.3 var(--testo); letter-spacing: .16em; text-transform: uppercase; color: var(--acc-scuro); margin-bottom: 1rem;
+}
+
+/* ---------- testata ---------- */
+.testata {
+  position: sticky; top: 0; z-index: 50; display: flex; align-items: center; gap: 18px;
+  padding: 10px var(--gutter);
+  background: rgba(244, 237, 224, .86); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--filo);
+}
+.marchio { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; white-space: nowrap; }
+.marchio span { font: 600 1rem/1 var(--titoli); letter-spacing: .2em; text-transform: uppercase; }
+.logo { width: auto; height: 42px; flex: none; }
+.menu { display: flex; gap: 4px; margin-left: auto; }
+.menu a { text-decoration: none; padding: 6px 12px; color: var(--inchiostro-2); font-size: 1rem; border-bottom: 1px solid transparent; transition: color .2s, border-color .2s; }
+.menu a:hover { color: var(--inchiostro); border-bottom-color: var(--oro); }
+.lingue { position: relative; }
+.lingue summary {
+  list-style: none; cursor: pointer; font: 700 .9rem/1 var(--testo); letter-spacing: .1em; color: var(--inchiostro);
+  border: 1px solid var(--filo); padding: 9px 12px; display: flex; gap: 8px; align-items: center;
+}
+.lingue summary::-webkit-details-marker { display: none; }
+.lingue summary::after { content: ''; width: 6px; height: 6px; border: solid currentColor; border-width: 0 1.5px 1.5px 0; transform: translateY(-2px) rotate(45deg); }
+.lingue ul { position: absolute; right: 0; top: calc(100% + 8px); margin: 0; padding: 6px; list-style: none; min-width: 170px; background: var(--carta); border: 1px solid var(--filo); box-shadow: 0 20px 40px -18px rgba(30, 26, 22, .45); }
+.lingue a { display: block; padding: 8px 12px; text-decoration: none; color: var(--inchiostro-2); }
+.lingue a:hover { background: var(--carta-2); color: var(--inchiostro); }
+.lingue a[aria-current] { background: var(--inchiostro); color: var(--carta); }
+
+/* ---------- pulsanti e piccoli pezzi ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 12px 28px;
+  background: var(--inchiostro); color: var(--carta); text-decoration: none;
+  font: 600 .95rem/1 var(--testo); letter-spacing: .16em; text-transform: uppercase;
+  border: 1px solid var(--inchiostro); transition: background .25s, color .25s;
+}
+.btn:hover { background: transparent; color: var(--inchiostro); }
+.chip { display: inline-block; font: italic 500 1.05rem/1 var(--testo); color: var(--grigio); border-top: 1px solid var(--filo); border-bottom: 1px solid var(--filo); padding: 7px 2px; }
+.link-manoscritto { font: italic 500 1.12rem/1.3 var(--testo); color: var(--inchiostro); text-decoration: none; border-bottom: 1px solid var(--oro-chiaro); }
+.link-manoscritto:hover { border-bottom-color: var(--inchiostro); }
+.fregio { display: block; margin-top: 18px; color: var(--oro); font-size: 1.5rem; }
+.claim { font: italic 500 clamp(1.35rem, 2.3vw, 1.7rem)/1.35 var(--titoli); color: var(--acc-scuro); margin-top: 14px; }
+.claim-piccolo { font-size: 1.18rem; color: var(--inchiostro-2); }
+.trama { margin-top: 18px; color: var(--inchiostro-2); }
+.trama p + p { margin-top: .8em; }
+.chiusa { font-style: italic; color: var(--inchiostro); }
+
+/* ---------- copertine come libri veri ---------- */
+.libro { position: relative; width: 100%; max-width: 300px; aspect-ratio: 2 / 3; perspective: 1200px; }
+.libro img, .libro .disegnata {
+  width: 100%; height: 100%; object-fit: cover; border-radius: 2px 6px 6px 2px;
+  box-shadow: 1px 1px 0 rgba(255, 255, 255, .25) inset, 0 28px 40px -22px rgba(30, 26, 22, .7), 0 6px 14px -6px rgba(30, 26, 22, .4);
+  transform: rotateY(-14deg); transform-origin: left center; transition: transform .6s cubic-bezier(.2, .8, .2, 1);
+}
+/* la piega del dorso */
+.libro::after {
+  content: ''; position: absolute; top: 0; bottom: 0; left: 0; width: 7%; pointer-events: none; border-radius: 2px 0 0 2px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, .35), rgba(255, 255, 255, .18) 45%, rgba(0, 0, 0, .12));
+  transform: rotateY(-14deg); transform-origin: left center; transition: transform .6s cubic-bezier(.2, .8, .2, 1);
+}
+.libro:hover img, .libro:hover .disegnata, .libro:hover::after { transform: rotateY(-4deg); }
+.libro-piccolo { max-width: 220px; }
+.disegnata {
+  display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center;
+  padding: 14% 10% 12%; background: linear-gradient(160deg, color-mix(in srgb, var(--acc) 80%, #fff 6%), color-mix(in srgb, var(--acc) 70%, #000 30%));
+  color: #f4ead6;
+}
+.d-autore { font: 500 .62rem/1.2 var(--titoli); letter-spacing: .26em; text-transform: uppercase; opacity: .85; }
+.libro-disegnato { container-type: inline-size; }
+.d-titolo { font: 500 11cqw/1.08 var(--titoli); text-transform: uppercase; letter-spacing: .02em; max-width: 100%; overflow-wrap: anywhere; }
+.d-segno { font-size: 1.4rem; color: #e7c98d; }
+
+/* ---------- eroe con lo scaffale ---------- */
+.eroe { padding: clamp(56px, 10vw, 120px) var(--gutter) 0; text-align: center; overflow: hidden; }
+.eroe-testo { max-width: 860px; margin: 0 auto; }
+.eroe h1 { font-size: clamp(2.8rem, 7.6vw, 6rem); font-weight: 500; letter-spacing: -.01em; line-height: 1.04; }
+.eroe-sotto { max-width: 36em; margin: 24px auto 0; color: var(--inchiostro-2); font-size: clamp(1.1rem, 1.8vw, 1.3rem); }
+.nota-lingua { margin-top: 14px; font: italic 500 1.12rem/1.4 var(--testo); color: #7a5c28; }
+.eroe .btn { margin-top: 34px; }
+.scaffale { position: relative; margin: clamp(48px, 7vw, 80px) calc(var(--gutter) * -1) 0; padding: 0 var(--gutter); overflow-x: auto; scrollbar-width: none; }
+.scaffale::-webkit-scrollbar { display: none; }
+.scaffale-in {
+  display: flex; justify-content: center; align-items: flex-end; gap: clamp(10px, 1.2vw, 18px); width: max-content; min-width: 100%;
+  padding: 30px 10px 0; border-bottom: 10px solid #6b4e33; box-shadow: 0 14px 18px -10px rgba(30, 26, 22, .55);
+  background: linear-gradient(180deg, transparent 92%, rgba(107, 78, 51, .18));
+}
+.dorso { display: block; width: clamp(88px, 7.6vw, 132px); flex: none; transition: transform .35s cubic-bezier(.2, .8, .2, 1); transform: rotate(calc((var(--i) - 3.5) * .9deg)); transform-origin: bottom center; }
+.dorso img { width: 100%; border-radius: 1px 4px 4px 1px; box-shadow: -4px 0 6px -3px rgba(0, 0, 0, .35) inset, 0 16px 24px -16px rgba(30, 26, 22, .8); }
+.dorso:hover { transform: translateY(-14px) rotate(0); }
+
+/* ---------- sezioni ---------- */
+.sezione { padding: clamp(80px, 11vw, 140px) var(--gutter) 0; }
+.sezione-testa { max-width: 760px; margin: 0 auto clamp(40px, 6vw, 72px); text-align: center; }
+.sezione-sotto { margin-top: 18px; color: var(--inchiostro-2); }
+
+.romanzo {
+  max-width: var(--max); margin: 0 auto clamp(64px, 9vw, 110px); display: grid; grid-template-columns: minmax(200px, 300px) 1fr;
+  gap: clamp(32px, 6vw, 88px); align-items: center;
+}
+.romanzo .libro { justify-self: center; }
+.romanzo-dx { grid-template-columns: 1fr minmax(200px, 300px); }
+.romanzo-dx .libro { order: 2; }
+.romanzo-dx .libro img, .romanzo-dx .libro::after { transform: rotateY(14deg); transform-origin: right center; }
+.romanzo-dx .libro::after { left: auto; right: auto; left: 0; }
+.romanzo-dx .libro:hover img, .romanzo-dx .libro:hover::after { transform: rotateY(4deg); }
+.romanzo h3 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); }
+.romanzo h3.minuscolo { text-transform: lowercase; }
+.romanzo-testo { max-width: 600px; }
+.romanzo-piede { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px; margin-top: 26px; }
+
+/* serie gialla: fascia più scura */
+.serie { background: var(--carta-2); border-top: 1px solid var(--filo); border-bottom: 1px solid var(--filo); padding-bottom: clamp(70px, 9vw, 110px); margin-top: clamp(20px, 4vw, 40px); }
+.griglia-gialli { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(22px, 3vw, 40px); }
+.giallo { display: flex; flex-direction: column; align-items: flex-start; }
+.giallo .libro { margin-bottom: 24px; }
+.giallo-vol { font: 700 .84rem/1 var(--testo); letter-spacing: .16em; text-transform: uppercase; color: var(--acc); }
+.giallo h3 { font-size: 1.6rem; margin-top: 8px; }
+.giallo-luogo { font: italic 400 1.08rem/1.3 var(--testo); color: var(--grigio); margin-top: 6px; }
+.giallo .claim-piccolo { margin-top: 12px; }
+.giallo-trama { margin: 14px 0 16px; border-top: 1px solid var(--filo); width: 100%; }
+.giallo-trama summary { cursor: pointer; padding: 10px 0; font: 700 .86rem/1 var(--testo); letter-spacing: .14em; text-transform: uppercase; list-style: none; display: flex; justify-content: space-between; }
+.giallo-trama summary::-webkit-details-marker { display: none; }
+.giallo-trama summary::after { content: '+'; font-size: 1.2rem; line-height: .6; color: var(--oro); }
+.giallo-trama[open] summary::after { content: '−'; }
+.giallo-trama .trama { margin-top: 4px; font-size: 1.1rem; }
+
+.griglia-librigiochi { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(30px, 4vw, 56px); }
+.librogioco { display: grid; grid-template-columns: minmax(110px, 160px) 1fr; gap: clamp(18px, 3vw, 32px); align-items: start; }
+.librogioco h3 { font-size: 1.8rem; }
+.librogioco .trama { font-size: 1.12rem; }
+.lg-piede { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; margin-top: 18px; }
+.lg-dettagli { font: italic 400 1.05rem/1.3 var(--testo); color: var(--grigio); }
+
+.editori-in {
+  max-width: 820px; margin: 0 auto; text-align: center; padding: clamp(36px, 6vw, 64px) clamp(20px, 5vw, 64px);
+  border: 1px solid var(--oro-chiaro); outline: 1px solid var(--oro-chiaro); outline-offset: 6px;
+}
+.editori-in h2 { font-size: clamp(1.8rem, 3.8vw, 2.6rem); }
+.editori-in p { margin: 18px auto 28px; color: var(--inchiostro-2); max-width: 34em; }
+
+.autore-in { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 200px 1fr; gap: clamp(28px, 6vw, 72px); align-items: center; }
+.logo-grande { width: 100%; max-width: 200px; height: auto; justify-self: center; }
+.autore-in h2 { font-size: clamp(2rem, 4.4vw, 3rem); }
+.autore-in p:not(.occhiello) { margin-top: 16px; color: var(--inchiostro-2); }
+.autore-in .link-manoscritto { display: inline-block; margin-top: 22px; }
+
+.contatti { text-align: center; }
+.contatti p:not(.occhiello) { margin-top: 14px; color: var(--inchiostro-2); }
+.email { display: inline-block; margin-top: 22px; font: italic 500 clamp(1.4rem, 4vw, 2.5rem)/1.2 var(--titoli); color: var(--inchiostro); text-decoration: none; border-bottom: 1px solid var(--oro); overflow-wrap: anywhere; }
+.email:hover { color: var(--oro); }
+
+/* ---------- piede ---------- */
+.piede { margin-top: clamp(90px, 12vw, 150px); border-top: 1px solid var(--filo); padding: 34px var(--gutter) 44px; }
+.piede-in { max-width: var(--max); margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; }
+.piede-link { display: flex; flex-wrap: wrap; gap: 6px 24px; margin-left: auto; }
+.piede-link a { color: var(--inchiostro-2); text-decoration: none; }
+.piede-link a:hover { color: var(--inchiostro); text-decoration: underline; }
+.piede-nota { width: 100%; color: var(--grigio); font-size: 1rem; }
+
+/* riga per editori e agenti sotto la trama */
+.scheda-ed { margin-top: 16px; font: 600 .95rem/1.4 var(--testo); letter-spacing: .04em; color: var(--inchiostro); }
+.scheda-piccola { margin: 0 0 12px; font-size: .9rem; color: var(--grigio); }
+
+/* note legali e privacy del sito */
+.legale { padding: clamp(48px, 8vw, 96px) var(--gutter) 0; }
+.legale-in { max-width: 740px; margin: 0 auto; }
+.legale h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); }
+.legale-data { color: var(--grigio); margin-top: 10px; font-style: italic; }
+.legale section { margin-top: 34px; padding-top: 26px; border-top: 1px solid var(--filo); }
+.legale h2 { font-size: clamp(1.4rem, 2.6vw, 1.8rem); }
+.legale section p { color: var(--inchiostro-2); margin-top: 12px; }
+.legale a { color: var(--inchiostro); text-decoration-color: var(--oro); text-underline-offset: 3px; overflow-wrap: anywhere; }
+
+.vuota { min-height: 62vh; display: grid; place-content: center; justify-items: center; text-align: center; gap: 18px; padding: 60px var(--gutter); }
+.vuota .logo-grande { max-width: 110px; }
+.vuota h1 { font-size: clamp(2.2rem, 6vw, 3.8rem); }
+
+/* comparsa morbida */
+.js-pronto .appare { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s cubic-bezier(.2, .8, .2, 1); }
+.js-pronto .appare.vista { opacity: 1; transform: none; }
+
+:lang(zh-Hans) .occhiello, :lang(zh-Hans) .marchio span { letter-spacing: .1em; }
+:lang(zh-Hans) h1, :lang(zh-Hans) h2 { line-height: 1.25; }
+
+/* ---------- schermi stretti ---------- */
+@media (max-width: 960px) {
+  .griglia-gialli { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .griglia-librigiochi { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .menu { display: none; }
+  .lingue { margin-left: auto; }
+  .romanzo, .romanzo-dx { grid-template-columns: 1fr; text-align: left; }
+  .romanzo-dx .libro { order: 0; }
+  .romanzo .libro { max-width: 240px; }
+  .autore-in { grid-template-columns: 1fr; text-align: center; }
+  .logo-grande { max-width: 130px; }
+  .marchio span { font-size: .8rem; letter-spacing: .18em; }
+  .logo { height: 36px; }
+}
+@media (max-width: 520px) {
+  .griglia-gialli { grid-template-columns: 1fr 1fr; gap: 26px 16px; }
+  .giallo h3 { font-size: 1.2rem; }
+  .librogioco { grid-template-columns: 96px 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0s !important; }
+  .js-pronto .appare { opacity: 1; transform: none; }
+}

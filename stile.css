@@ -181,6 +181,7 @@ p { margin: 0; }
 .pagina-eroe h1 { font-size: clamp(2.8rem, 7vw, 5.4rem); }
 .firma { display: block; margin-top: 14px; font: italic 500 clamp(1.3rem, 2.4vw, 1.75rem)/1.3 var(--titoli); color: var(--oro); }
 .pagina-eroe .fregio { margin-top: 30px; }
+.perche { max-width: 32em; margin: 18px auto 0; font: italic 500 clamp(1.2rem, 2vw, 1.4rem)/1.45 var(--titoli); color: var(--inchiostro); }
 .sezione-collana { padding-top: clamp(48px, 7vw, 90px); }
 .chip-pronto { color: var(--inchiostro); font-weight: 600; border-color: var(--oro-chiaro); }
 

@@ -14,7 +14,7 @@
 
   // i libri compaiono mentre si scorre
   if ('IntersectionObserver' in window) {
-    var els = document.querySelectorAll('.romanzo, .giallo, .librogioco, .editori-in, .autore-in, .sezione-testa');
+    var els = document.querySelectorAll('.romanzo, .giallo, .collana, .editori-in, .autore-in, .sezione-testa');
     var io = new IntersectionObserver(function (voci) {
       voci.forEach(function (v) {
         if (!v.isIntersecting) return;

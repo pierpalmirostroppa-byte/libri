@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://intreccidicarta.com/libri/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/"/>
@@ -12,8 +12,30 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://intreccidicarta.com/libri/"/>
   </url>
   <url>
+    <loc>https://intreccidicarta.com/libri/librigiochi.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://intreccidicarta.com/libri/de/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://intreccidicarta.com/libri/es/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://intreccidicarta.com/libri/zh/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://intreccidicarta.com/libri/librigiochi.html"/>
+  </url>
+  <url>
+    <loc>https://intreccidicarta.com/libri/bambini.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://intreccidicarta.com/libri/de/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://intreccidicarta.com/libri/es/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://intreccidicarta.com/libri/zh/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://intreccidicarta.com/libri/bambini.html"/>
+  </url>
+  <url>
     <loc>https://intreccidicarta.com/libri/legal.html</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/legal.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/legal.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/legal.html"/>
@@ -24,7 +46,7 @@
   </url>
   <url>
     <loc>https://intreccidicarta.com/libri/en/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/"/>
@@ -34,8 +56,30 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://intreccidicarta.com/libri/"/>
   </url>
   <url>
+    <loc>https://intreccidicarta.com/libri/en/librigiochi.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://intreccidicarta.com/libri/de/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://intreccidicarta.com/libri/es/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://intreccidicarta.com/libri/zh/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://intreccidicarta.com/libri/librigiochi.html"/>
+  </url>
+  <url>
+    <loc>https://intreccidicarta.com/libri/en/bambini.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://intreccidicarta.com/libri/de/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://intreccidicarta.com/libri/es/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://intreccidicarta.com/libri/zh/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://intreccidicarta.com/libri/bambini.html"/>
+  </url>
+  <url>
     <loc>https://intreccidicarta.com/libri/en/legal.html</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/legal.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/legal.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/legal.html"/>
@@ -46,7 +90,7 @@
   </url>
   <url>
     <loc>https://intreccidicarta.com/libri/fr/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/"/>
@@ -56,8 +100,30 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://intreccidicarta.com/libri/"/>
   </url>
   <url>
+    <loc>https://intreccidicarta.com/libri/fr/librigiochi.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://intreccidicarta.com/libri/de/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://intreccidicarta.com/libri/es/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://intreccidicarta.com/libri/zh/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://intreccidicarta.com/libri/librigiochi.html"/>
+  </url>
+  <url>
+    <loc>https://intreccidicarta.com/libri/fr/bambini.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://intreccidicarta.com/libri/de/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://intreccidicarta.com/libri/es/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://intreccidicarta.com/libri/zh/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://intreccidicarta.com/libri/bambini.html"/>
+  </url>
+  <url>
     <loc>https://intreccidicarta.com/libri/fr/legal.html</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/legal.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/legal.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/legal.html"/>
@@ -68,7 +134,7 @@
   </url>
   <url>
     <loc>https://intreccidicarta.com/libri/de/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/"/>
@@ -78,8 +144,30 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://intreccidicarta.com/libri/"/>
   </url>
   <url>
+    <loc>https://intreccidicarta.com/libri/de/librigiochi.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://intreccidicarta.com/libri/de/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://intreccidicarta.com/libri/es/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://intreccidicarta.com/libri/zh/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://intreccidicarta.com/libri/librigiochi.html"/>
+  </url>
+  <url>
+    <loc>https://intreccidicarta.com/libri/de/bambini.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://intreccidicarta.com/libri/de/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://intreccidicarta.com/libri/es/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://intreccidicarta.com/libri/zh/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://intreccidicarta.com/libri/bambini.html"/>
+  </url>
+  <url>
     <loc>https://intreccidicarta.com/libri/de/legal.html</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/legal.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/legal.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/legal.html"/>
@@ -90,7 +178,7 @@
   </url>
   <url>
     <loc>https://intreccidicarta.com/libri/es/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/"/>
@@ -100,8 +188,30 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://intreccidicarta.com/libri/"/>
   </url>
   <url>
+    <loc>https://intreccidicarta.com/libri/es/librigiochi.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://intreccidicarta.com/libri/de/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://intreccidicarta.com/libri/es/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://intreccidicarta.com/libri/zh/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://intreccidicarta.com/libri/librigiochi.html"/>
+  </url>
+  <url>
+    <loc>https://intreccidicarta.com/libri/es/bambini.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://intreccidicarta.com/libri/de/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://intreccidicarta.com/libri/es/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://intreccidicarta.com/libri/zh/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://intreccidicarta.com/libri/bambini.html"/>
+  </url>
+  <url>
     <loc>https://intreccidicarta.com/libri/es/legal.html</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/legal.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/legal.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/legal.html"/>
@@ -112,7 +222,7 @@
   </url>
   <url>
     <loc>https://intreccidicarta.com/libri/zh/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/"/>
@@ -122,8 +232,30 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://intreccidicarta.com/libri/"/>
   </url>
   <url>
+    <loc>https://intreccidicarta.com/libri/zh/librigiochi.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://intreccidicarta.com/libri/de/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://intreccidicarta.com/libri/es/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://intreccidicarta.com/libri/zh/librigiochi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://intreccidicarta.com/libri/librigiochi.html"/>
+  </url>
+  <url>
+    <loc>https://intreccidicarta.com/libri/zh/bambini.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://intreccidicarta.com/libri/de/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://intreccidicarta.com/libri/es/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://intreccidicarta.com/libri/zh/bambini.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://intreccidicarta.com/libri/bambini.html"/>
+  </url>
+  <url>
     <loc>https://intreccidicarta.com/libri/zh/legal.html</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://intreccidicarta.com/libri/legal.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://intreccidicarta.com/libri/en/legal.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://intreccidicarta.com/libri/fr/legal.html"/>

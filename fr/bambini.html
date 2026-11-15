@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-P3InhZX2fEfuMqW7cfMjxQSZAuUlx6FK4eMTiVctJvA='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-P3InhZX2fEfuMqW7cfMjxQSZAuUlx6FK4eMTiVctJvA='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src https://formsubmit.co; object-src 'none'; base-uri 'self'; form-action https://formsubmit.co">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Livres pour enfants · par Penelope Starwood · Intrecci di Carta</title>
@@ -31,10 +31,10 @@
 <meta property="og:image:alt" content="Livres pour enfants · par Penelope Starwood · Intrecci di Carta">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="../font/EBGaramond-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../stile.css?v=b4766703">
+<link rel="stylesheet" href="../stile.css?v=7794b490">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://intreccidicarta.com/libri/bambini.html#autore","name":"Penelope Starwood"},{"@type":"Book","author":{"@id":"https://intreccidicarta.com/libri/bambini.html#autore"},"publisher":{"@type":"Organization","name":"Intrecci di Carta","url":"https://intreccidicarta.com/libri/"},"name":"Chi ha paura del buio, Pip?","inLanguage":"it","genre":"Albo illustrato · dai 3 ai 6 anni","description":"Quando il sole scende dietro le colline, il piccolo riccio Pip si stringe la sciarpa gialla e si nasconde sotto la sua coperta di muschio. Il buio è troppo grande! Poi una lucina brilla sulla porta. Glow, la lucciola, ha tante cose da mostrargli: una coccinella sorridente su una foglia, la luna tra i rami di una vecchia quercia, un sassolino lucido nell'erba e un cielo pieno di stelle. Una dolce storia della buonanotte per trovare il coraggio un passo alla volta, per tutti i piccoli che hanno paura del buio.","image":"https://intreccidicarta.com/libri/img/copertine/pip-it.webp","bookFormat":["https://schema.org/Paperback","https://schema.org/EBook"],"typicalAgeRange":"3-6","url":"https://intreccidicarta.com/libri/fr/bambini.html#pip","sameAs":"https://www.amazon.it/s?k=Chi+ha+paura+del+buio+Pip+Penelope+Starwood"},{"@type":"Book","author":{"@id":"https://intreccidicarta.com/libri/bambini.html#autore"},"publisher":{"@type":"Organization","name":"Intrecci di Carta","url":"https://intreccidicarta.com/libri/"},"name":"Who's Afraid of the Dark, Pip?","inLanguage":"en","genre":"Picture book · ages 3 to 6","description":"When the sun slips behind the hills, little Pip the hedgehog pulls his yellow scarf tight and hides under his blanket of moss. The dark is just too big! Then a tiny light twinkles at the door. Glow the firefly has something to show him: a smiling ladybug on a leaf, the moon shining through an old oak, a shiny pebble in the grass and a whole sky full of stars. A gentle bedtime story about finding courage one small step at a time, for every little one who is afraid of the dark.","image":"https://intreccidicarta.com/libri/img/copertine/pip-en.webp","bookFormat":["https://schema.org/Paperback","https://schema.org/EBook"],"typicalAgeRange":"3-6","url":"https://intreccidicarta.com/libri/fr/bambini.html#pip","sameAs":"https://www.amazon.com/s?k=Who%27s+Afraid+of+the+Dark+Pip+Penelope+Starwood"}]}</script>
 <script>/* chi ha già scelto una lingua la ritrova */try{var s=localStorage.getItem('lingua-libri'),m={"it":"../bambini.html","en":"../en/bambini.html","fr":"../fr/bambini.html","de":"../de/bambini.html","es":"../es/bambini.html","zh":"../zh/bambini.html"};if(s&&s!=='fr'&&m[s])location.replace(m[s])}catch(e){}</script>
-<script src="../sito.js?v=fdc385e7" defer></script>
+<script src="../sito.js?v=4f5d4f6b" defer></script>
 </head>
 <body>
 <a class="salta" href="#contenuto">Aller au contenu</a>
@@ -115,7 +115,20 @@
     <p class="occhiello">Newsletter</p>
     <h2>Abonnez-vous à la newsletter</h2>
     <p>Nous vous écrivons quand sort un nouveau livre ou un nouveau jeu. Rien de plus.</p>
-    <a class="btn" href="mailto:info@intreccidicarta.com?subject=Inscription%20%C3%A0%20la%20newsletter&body=Je%20souhaite%20recevoir%20la%20newsletter%20d'Intrecci%20di%20Carta.">S'abonner</a>
+    <form class="newsletter-modulo" action="https://formsubmit.co/info@intreccidicarta.com" method="post" data-ajax="https://formsubmit.co/ajax/info@intreccidicarta.com"
+      data-errore="Saisissez une adresse e-mail valide, par exemple nom@exemple.fr." data-invio="Envoi en cours…" data-grazie="Merci ! Vous êtes inscrit à la newsletter." data-problema="Une erreur s'est produite. Réessayez plus tard ou écrivez-nous à info@intreccidicarta.com.">
+      <label class="nascosto" for="nl-email">Votre adresse e-mail</label>
+      <div class="newsletter-riga">
+        <input id="nl-email" type="email" name="email" required autocomplete="email" placeholder="Votre e-mail" aria-describedby="nl-msg">
+        <button class="btn" type="submit">S'abonner</button>
+      </div>
+      <input type="hidden" name="_subject" value="Inscription à la newsletter (fr)">
+      <input type="hidden" name="lingua" value="fr">
+      <input type="hidden" name="_template" value="table">
+      <input class="miele" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="newsletter-msg" id="nl-msg" role="status" aria-live="polite"></p>
+    </form>
+    <p class="newsletter-nota">Nous utilisons votre adresse uniquement pour la newsletter. Vous pouvez vous désabonner à tout moment.</p>
   </div>
 </section>
 <footer class="piede">

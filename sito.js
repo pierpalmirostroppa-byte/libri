@@ -31,4 +31,33 @@
     });
     html.classList.add('js-pronto');
   }
+
+  // newsletter: controlla che l'indirizzo sia scritto bene e lo manda a FormSubmit senza lasciare la pagina.
+  // Senza JavaScript il modulo va a FormSubmit nel modo normale (il browser controlla da solo l'indirizzo).
+  var nl = document.querySelector('.newsletter-modulo');
+  if (nl && window.fetch) {
+    nl.noValidate = true;
+    var campo = nl.querySelector('#nl-email'), msg = nl.querySelector('.newsletter-msg'), btn = nl.querySelector('button');
+    var giusto = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)*\.[a-z]{2,}$/i;
+    var avvisa = function (testo, tipo) { msg.textContent = testo; msg.className = 'newsletter-msg' + (tipo ? ' ' + tipo : ''); };
+    campo.addEventListener('input', function () {
+      campo.removeAttribute('aria-invalid');
+      if (msg.classList.contains('errore')) avvisa('', '');
+    });
+    nl.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = campo.value.trim();
+      if (!giusto.test(email)) { campo.setAttribute('aria-invalid', 'true'); avvisa(nl.dataset.errore, 'errore'); campo.focus(); return; }
+      if (nl.elements._honey.value) return; // l'ha riempito un programma, non una persona
+      btn.disabled = true; avvisa(nl.dataset.invio, '');
+      var dati = {};
+      ['_subject', 'lingua', '_template'].forEach(function (n) { dati[n] = nl.elements[n].value; });
+      dati.email = email;
+      fetch(nl.dataset.ajax, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(dati) })
+        .then(function (r) { return r.json(); })
+        .then(function (j) { if (String(j.success) !== 'true') throw new Error(j.message || 'errore'); campo.value = ''; avvisa(nl.dataset.grazie, 'ok'); })
+        .catch(function () { avvisa(nl.dataset.problema, 'errore'); })
+        .then(function () { btn.disabled = false; });
+    });
+  }
 })();

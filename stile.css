@@ -197,6 +197,8 @@ p { margin: 0; }
 .ed-lingua { display: block; font: 700 .78rem/1.2 var(--testo); letter-spacing: .14em; text-transform: uppercase; color: var(--acc-scuro); }
 .ed-titolo { display: block; margin-top: 4px; font: 600 1.2rem/1.2 var(--titoli); }
 .ed-formati { display: block; margin-top: 2px; font: italic 400 1rem/1.3 var(--testo); color: var(--grigio); }
+.compra { margin-top: 26px; }
+.compra-pulsanti { display: flex; flex-wrap: wrap; gap: 10px 12px; margin-top: 14px; }
 .btn-piccolo { min-height: 44px; padding: 10px 18px; font-size: .8rem; letter-spacing: .12em; white-space: nowrap; }
 
 

@@ -201,6 +201,12 @@ p { margin: 0; }
 .compra { margin-top: 26px; }
 .compra-pulsanti { display: flex; flex-wrap: wrap; gap: 10px 12px; margin-top: 14px; }
 .btn-piccolo { min-height: 44px; padding: 10px 18px; font-size: .8rem; letter-spacing: .12em; white-space: nowrap; }
+/* demo giocabile dei librigiochi: pulsante chiaro, per non confonderlo con «compra» */
+.demo { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--filo); }
+.btn-demo { background: transparent; color: var(--inchiostro); }
+.btn-demo::before { content: '\25B8'; margin-right: 10px; font-size: 1rem; }
+.btn-demo:hover { background: var(--inchiostro); color: var(--carta); }
+.demo-nota { margin: 8px 0 0; font: italic 400 1rem/1.4 var(--testo); color: var(--grigio); }
 
 
 .editori-in {
